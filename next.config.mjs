@@ -9,7 +9,6 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: "/portfolio-v1",
-  assetPrefix: "/portfolio-v1",
 };
 
 const withMDX = nextMDX({
