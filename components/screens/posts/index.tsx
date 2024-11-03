@@ -36,14 +36,14 @@ export const Layout = ({ post, route }: Props) => {
     <React.Fragment>
       <div className="flex flex-col">
         <div>
-          <h1>{post.title}</h1>
+          <h1>{post.title} {post.pagesite?.url && <a href={post.pagesite.url} target="_blank" rel="noopener noreferrer" className="ml-2 text-muted">{post.pagesite.url}</a>}</h1>
         </div>
         <div className="mt-1 flex gap-2 text-muted text-small">
-          <PublishedTime />
-          <Seperator />
-          <UpdateTime />
-          <Seperator />
-          <ReadingTime />
+          {!post.hideOptions?.hideCreated && <PublishedTime />}
+          {!post.hideOptions?.hideUpdated && <Seperator />}
+          {!post.hideOptions?.hideUpdated && <UpdateTime />}
+          {!post.hideOptions?.hideReadingTime && <Seperator />}
+          {!post.hideOptions?.hideReadingTime && <ReadingTime />}
         </div>
       </div>
 

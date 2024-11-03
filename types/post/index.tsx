@@ -1,9 +1,22 @@
 export type Post = {
   title: string;
+  pagesite?: {
+    url?: string;
+  };
   slug: string;
   content: string;
   tags?: string[];
   summary?: string;
+
+  hideOptions?: {
+    hidePagesite?: boolean;
+    hideAuthor?: boolean;
+    hideCreated?: boolean;
+    hideUpdated?: boolean;
+    hideReadingTime?: boolean;
+    hideTags?: boolean;
+    hideSummary?: boolean;
+  };
 
   author?: {
     name?: string;
