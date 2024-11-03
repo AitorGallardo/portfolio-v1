@@ -19,11 +19,11 @@ export const AppThemeSwitcher = () => {
   if (!mounted) return null;
 
   const buttons = [
-    {
-      label: "system",
-      icon: <Monitor width={13} />,
-      active: theme === "system",
-    },
+    // {
+    //   label: "system",
+    //   icon: <Monitor width={13} />,
+    //   active: theme === "system",
+    // },
     { label: "dark", icon: <Moon width={13} />, active: theme === "dark" },
     { label: "light", icon: <Sun width={13} />, active: theme === "light" },
   ];
@@ -50,7 +50,7 @@ export const AppThemeProvider = ({
   children: React.ReactNode;
 }) => {
   return (
-    <ThemeProvider enableSystem={true} attribute="class" storageKey="theme" defaultTheme="system">
+    <ThemeProvider enableSystem={true} attribute="class" storageKey="theme" defaultTheme="dark">
       {children}
     </ThemeProvider>
   );

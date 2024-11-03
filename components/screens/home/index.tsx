@@ -3,12 +3,16 @@ import { Experiences } from "@/components/experience/exeperiences";
 import { Footer } from "@/components/footer";
 import * as FadeIn from "@/components/motion/staggers/fade";
 import { Posts } from "@/components/posts";
+import { AppThemeSwitcher } from "@/components/theme";
 
 const Spacer = () => <div style={{ marginTop: "24px" }} />;
 
 export default function Home() {
   return (
     <FadeIn.Container>
+      <div className="mt-4 mb-8 flex justify-end text-muted text-small">
+        <AppThemeSwitcher />
+      </div>
       <FadeIn.Item>
         <div className="flex justify-between">
           <div>
@@ -34,6 +38,9 @@ Full-stack software engineer passionate about building impactful solutions. I co
         <Footer />
       </FadeIn.Item> */}
       {/* <DeployButton /> */}
+      <div className="fixed bottom-8 right-8 text-muted text-small">
+        <a href="https://github.com/aitorgallardo/portfolio-v1">Portfolio v0</a>
+      </div>
     </FadeIn.Container>
   );
 }
