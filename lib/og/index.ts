@@ -3,25 +3,25 @@ import type { Metadata } from "next/types";
 export const OpenGraph: Metadata = {
   metadataBase: process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL) : undefined,
   title: {
-    default: "Sylph",
+    default: "Aitor's Portfolio",
     template: "%s",
   },
   description: "...",
-  keywords: ["Design", "Development", "Engineering"],
+  keywords: ["Portfolio", "Development", "Engineering"],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_SITE_URL,
-    title: "Sylph",
+    title: "Aitor's Portfolio",
     description: "...",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}api/og`],
-    siteName: "Sylph",
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}images/bbbookmarks-icon-128x128.png`],
+    siteName: "Aitor's Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sylph",
+    title: "Aitor's Portfolio",
     description: "...",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}api/og`],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}api/images/bbbookmarks-icon-128x128.png`],
   },
   robots: {
     index: true,
