@@ -15,7 +15,7 @@ export default function Home() {
         <div className="flex justify-between">
           <div className="w-full">
             <h1>Aitor Gallardo Muñoz</h1>
-            <div className="flex items-center justify-between w-full gap-2">
+            <div className="flex w-full items-center justify-between gap-2">
               <h2>Software Engineer</h2>
               {/* <a 
                 href="/path-to-cv.pdf"
@@ -47,11 +47,8 @@ export default function Home() {
       </FadeIn.Item> */}
       {/* <DeployButton /> */}
       <div className="fixed right-8 bottom-8 flex gap-4 text-muted text-small">
-        <a 
-          href={`${process.env.NEXT_PUBLIC_BASE_PATH}/documents/cv.pdf`}
-          className="hover:text-primary transition-colors"
-          download
-        >
+        <a href="https://github.com/aitorgallardo">GitHub</a>
+        <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/documents/cv.pdf`} className="transition-colors hover:text-primary" download>
           Download CV
         </a>
         <a href="https://aitorgallardo.github.io/portfolio-v0/">Portfolio v0</a>

@@ -4,7 +4,7 @@ interface DownloadIconProps {
   className?: string;
 }
 
-export const DownloadIcon = ({ width = 24, height = 24, className = '' }: DownloadIconProps) => {
+export const DownloadIcon = ({ width = 24, height = 24, className = "" }: DownloadIconProps) => {
   return (
     <svg
       viewBox="0 0 24 24"
