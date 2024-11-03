@@ -24,7 +24,7 @@ export const Experiences = () => {
     <div>
       <h2 className="mt-6 py-2 text-muted capitalize">Experience</h2>
       <Seperator />
-      <ExperienceItem title="Apartool" date={{ created: "Aug 2023", updated: "now" }} />
+      <ExperienceItem title="Apartool" date={{ created: "Aug 2023", updated: "Present" }} />
       <Seperator />
       <ExperienceItem title="Freelance" date={{ created: "Jan 2023", updated: "Mar 2023" }} />
       <Seperator />

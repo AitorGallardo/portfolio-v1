@@ -38,7 +38,7 @@ export default function Home() {
       </FadeIn.Item> */}
       {/* <DeployButton /> */}
       <div className="fixed right-8 bottom-8 text-muted text-small">
-        <a href="https://github.com/aitorgallardo/portfolio-v1">Portfolio v0</a>
+        <a href="https://aitorgallardo.github.io/portfolio-v0/">Portfolio v0</a>
       </div>
     </FadeIn.Container>
   );

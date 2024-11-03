@@ -8,7 +8,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/portfolio-v1",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
 };
 
 const withMDX = nextMDX({
