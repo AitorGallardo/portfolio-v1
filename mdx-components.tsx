@@ -1,8 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import type { MDXRemoteProps } from "next-mdx-remote/rsc";
 import type { PluggableList } from "unified";
-import { Step } from "@/components/mdx/Step";
-import { Steps } from "@/components/mdx/Steps";
 
 import FootnoteBackReference from "@/components/footnote/back-reference";
 import FootnoteForwardReference from "@/components/footnote/forward-reference";
@@ -113,9 +111,7 @@ const components: MDXComponents = {
   },
   Step: ({ number, title, children, className }) => (
     <div className={cn("flex items-baseline gap-4", className)}>
-      <div className="flex-none w-6 h-6 rounded-full bg-gray-200 font-semibold text-sm text-gray-900 flex items-center justify-center">
-        {number}
-      </div>
+      <div className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-gray-200 font-semibold text-gray-900 text-sm">{number}</div>
       <div>
         <h3 className="font-medium text-gray-11">{title}</h3>
         <div className="mt-1 text-gray-600">{children}</div>

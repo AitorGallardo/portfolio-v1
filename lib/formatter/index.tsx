@@ -23,7 +23,7 @@ const dateRange = (start: Date, end: Date): string => {
     year: "numeric",
     month: "short",
   });
-  
+
   return `${formatDate.format(start)} - ${formatDate.format(end)}`;
 };
 

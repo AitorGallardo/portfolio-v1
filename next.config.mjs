@@ -4,6 +4,11 @@ import nextMDX from "@next/mdx";
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ["md", "mdx", "tsx", "ts", "jsx", "js"],
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  basePath: "/portfolio-v1",
 };
 
 const withMDX = nextMDX({

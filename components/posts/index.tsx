@@ -36,10 +36,7 @@ export const Posts = ({ category, singleDate = false, showCount = true }: PostPr
             <NextViewTransition href={`/${category}/${post.slug}`} className="flex w-full justify-between py-2">
               <p>{post.title}</p>
               <p className="mt-0 text-muted">
-                {singleDate ? formatter.date(new Date(post.time.created)) : formatter.dateRange(
-                  new Date(post.time.created), 
-                    new Date(post.time.updated)
-                  )}
+                {singleDate ? formatter.date(new Date(post.time.created)) : formatter.dateRange(new Date(post.time.created), new Date(post.time.updated))}
               </p>
             </NextViewTransition>
           </React.Fragment>

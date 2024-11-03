@@ -1,6 +1,4 @@
-import { DeployButton } from "@/components/deploy";
 import { Experiences } from "@/components/experience/exeperiences";
-import { Footer } from "@/components/footer";
 import * as FadeIn from "@/components/motion/staggers/fade";
 import { Posts } from "@/components/posts";
 import { AppThemeSwitcher } from "@/components/theme";
@@ -24,7 +22,8 @@ export default function Home() {
       <Spacer />
       <FadeIn.Item>
         <p>
-Full-stack software engineer passionate about building impactful solutions. I combine technical expertise with creative problem-solving to deliver robust applications. Always eager to learn and collaborate with forward-thinking teams.
+          Full-stack software engineer passionate about building impactful solutions. I combine technical expertise with creative problem-solving to deliver
+          robust applications. Always eager to learn and collaborate with forward-thinking teams.
         </p>
       </FadeIn.Item>
       <FadeIn.Item>
@@ -38,7 +37,7 @@ Full-stack software engineer passionate about building impactful solutions. I co
         <Footer />
       </FadeIn.Item> */}
       {/* <DeployButton /> */}
-      <div className="fixed bottom-8 right-8 text-muted text-small">
+      <div className="fixed right-8 bottom-8 text-muted text-small">
         <a href="https://github.com/aitorgallardo/portfolio-v1">Portfolio v0</a>
       </div>
     </FadeIn.Container>

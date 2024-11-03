@@ -1,5 +1,5 @@
 import IconPortfolio from "@/components/favicon/IconPortfolio";
-import { gray } from "@radix-ui/colors";
+
 import { ImageResponse } from "next/og";
 
 export const size = {
@@ -9,10 +9,7 @@ export const size = {
 export const contentType = "image/png";
 
 export default function Icon() {
-  return new ImageResponse(
-    <IconPortfolio />,
-    {
-      ...size,
-    }
-  );
+  return new ImageResponse(<IconPortfolio />, {
+    ...size,
+  });
 }

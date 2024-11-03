@@ -4,7 +4,7 @@ import type React from "react";
 
 import { cn } from "@/lib/cn";
 
-import { Monitor, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { ThemeProvider, useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 

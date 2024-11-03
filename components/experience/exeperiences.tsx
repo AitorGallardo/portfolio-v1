@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ExperienceItemProps {
   title: string;
   date: {
@@ -34,4 +32,3 @@ export const Experiences = () => {
     </div>
   );
 };
-
