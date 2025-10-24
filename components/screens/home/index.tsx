@@ -31,8 +31,7 @@ export default function Home() {
       <Spacer />
       <FadeIn.Item>
         <p>
-          Full-stack software engineer passionate about building impactful solutions. I combine technical expertise with creative problem-solving to deliver
-          robust applications. Always eager to learn and collaborate with forward-thinking teams.
+          Full-stack software engineer passionate about building impactful solutions. Always eager to learn and collaborate with forward-thinking teams.
         </p>
       </FadeIn.Item>
       <FadeIn.Item>
