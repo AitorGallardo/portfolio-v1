@@ -16,7 +16,7 @@ export default function Home() {
           <div className="w-full">
             <h1>Aitor Gallardo Muñoz</h1>
             <div className="flex w-full items-center justify-between gap-2">
-              <h2>Software Engineer</h2>
+              <h2>Full-Stack &amp; AI Engineer</h2>
               {/* <a 
                 href="/path-to-cv.pdf"
                 className="text-sm text-muted hover:text-primary transition-colors"
@@ -31,7 +31,9 @@ export default function Home() {
       <Spacer />
       <FadeIn.Item>
         <p>
-          Full-stack software engineer passionate about building impactful solutions. Always eager to learn and collaborate with forward-thinking teams.
+          Full-stack engineer who ships products end-to-end — from product design and frontend to serverless backends and applied AI. Most
+          recently I built and shipped <a href="https://xsaved.com" className="underline transition-colors hover:text-primary">XSaved</a> solo: a
+          local-first, AI-organized bookmark manager for X, spanning a Chrome extension, native iOS and Mac apps, and the backend behind them.
         </p>
       </FadeIn.Item>
       <FadeIn.Item>
@@ -46,6 +48,9 @@ export default function Home() {
       </FadeIn.Item> */}
       {/* <DeployButton /> */}
       <div className="fixed right-8 bottom-8 flex gap-4 text-muted text-small">
+        <a href="https://xsaved.com" className="transition-colors hover:text-primary">
+          XSaved
+        </a>
         <a href="https://github.com/aitorgallardo">GitHub</a>
         <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/documents/cv.pdf`} className="transition-colors hover:text-primary" download>
           Download CV
