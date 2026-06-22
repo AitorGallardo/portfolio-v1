@@ -1,10 +1,10 @@
 ---
 title: "XSaved"
-summary: "A solo-built product that turns chaotic X (Twitter) bookmarks into a searchable, AI-organized library — a shipped Chrome extension, with native iOS and Mac apps in development."
-tags: ["Chrome Extension", "iOS", "macOS", "Applied AI", "TypeScript", "SwiftUI", "Full-Stack"]
+summary: "Turn your messy pile of X bookmarks into a library you'll actually use — search it, sort it, and find anything in seconds."
+tags: ["Chrome Extension", "Productivity", "X / Twitter", "AI"]
 time:
-  created: "2025-10-24T19:24:46.167Z"
-  updated: "2026-06-21T00:00:00.000Z"
+  created: "2026-06-22T00:00:00.000Z"
+  updated: "2026-06-22T00:00:00.000Z"
 media:
   image: "/images/xsaved_ios_icon.png"
 pagesite:
@@ -13,9 +13,9 @@ hideOptions:
   hideUpdated: true
   hideReadingTime: true
 seo:
-  title: "XSaved — A local-first, AI-organized bookmark manager for X"
-  description: "XSaved is a solo-built product suite (Chrome extension + native iOS and Mac apps) that turns thousands of X bookmarks into a searchable, AI-organized, local-first library."
-  keywords: ["twitter bookmarks", "x bookmarks", "bookmark manager", "chrome extension", "ios app", "local-first", "applied ai", "onnx", "swiftui"]
+  title: "XSaved — Bookmarks for X, done right"
+  description: "XSaved turns your endless list of X bookmarks into a searchable, organized library — right inside your browser."
+  keywords: ["x bookmarks", "twitter bookmarks", "bookmark manager", "chrome extension", "productivity"]
 ---
 
 <div className="mt-8 mb-2 flex items-center gap-4">
@@ -26,104 +26,49 @@ seo:
     height={72}
     className="rounded-2xl"
   />
-  <div>
-    <p className="m-0 font-medium">The bookmark manager X never built.</p>
-    <p className="m-0 text-muted text-small">
-      Designed, built, and shipped solo — a Chrome extension live on the Web Store, with native iOS and Mac apps in development.
-    </p>
-  </div>
+  <p className="m-0 font-medium">The bookmark manager X forgot to build.</p>
 </div>
 
 <Image
   src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/xsaved_hero.png`}
-  alt="XSaved — manage and customize your X bookmarks"
-  caption="XSaved replaces X's flat, unsearchable bookmarks page with an organized, searchable library that lives in your browser."
+  alt="XSaved — your X bookmarks, organized into a searchable library"
 />
 
-# The problem
+If you've ever saved a tweet and never found it again, you already know the problem. X bookmarks are one endless list — no search, no folders, no way back to that one post you actually needed.
 
-X (Twitter) gives you one flat, unsearchable list of bookmarks. Save a few hundred tweets and finding anything again is hopeless — there's no search, no tags, no folders, and if a tweet gets deleted, your bookmark is gone with it.
+XSaved fixes that. Install it, open X, and your bookmarks turn into a proper library you can search, sort, and actually enjoy coming back to.
 
-XSaved fixes that. It turns thousands of bookmarks into a **local-first, searchable, AI-organized library** — no accounts required, with your data living in your own browser.
-
-# One product, three surfaces
-
-XSaved started as a Chrome extension and is growing into a small native suite. The apps share one design system, data model, and bookmark-extraction core.
-
-## 1. Chrome Extension — shipped &amp; live
-
-The flagship: a Chrome MV3 extension (TypeScript + React 19) that captures your bookmarks straight from x.com and stores them locally, then layers search, tagging, folders, notes, and on-device AI topic clustering on top.
-
-<Image
-  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/xsaved_library.png`}
-  alt="XSaved bookmark library, auto-organized by topic, author, and date"
-  caption="Your library, organized — every saved tweet in a grid, auto-clustered by topic, with folders and tags in the sidebar."
-/>
+# Find anything in seconds
 
 <Image
   src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/xsaved_search.png`}
-  alt="XSaved faceted search by media type, tag, and author"
-  caption="Find anything in seconds — faceted search by media type, tag, author, or keyword across the entire library."
+  alt="Searching the XSaved library"
 />
+
+Type a word, a name, a topic. XSaved digs through everything you've ever saved and brings it up instantly — no more scrolling for ten minutes hoping to recognize it.
+
+# Organized the moment you open it
+
+<Image
+  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/xsaved_library.png`}
+  alt="The XSaved library, grouped by topic"
+/>
+
+Your saves arrange themselves into a clean, visual grid and group by topic, so related posts sit together. Filter by author, tag, or media type whenever you want to narrow things down.
+
+# Keep your own notes
 
 <Image
   src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/xsaved_notes.png`}
-  alt="Personal notes attached to a saved bookmark in XSaved"
-  caption="Your thoughts, right where you left them — attach personal notes to any bookmark so context never gets lost."
+  alt="Adding a personal note to a bookmark in XSaved"
 />
 
-## 2. XSaved for iOS — in development
+Add a quick note to any bookmark — why you saved it, what to do with it later. The context stays with the post, so you never have to remember.
 
-<div className="mt-6 mb-2 flex items-center gap-4">
-  <img
-    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/xsaved_ios_icon.png`}
-    alt="XSaved for iOS icon"
-    width={88}
-    height={88}
-    className="rounded-2xl"
-  />
-  <p className="m-0 text-muted">
-    A native SwiftUI app built on Apple's <strong>Liquid Glass</strong> design language (iOS 26): a Pinterest-style masonry grid of saved bookmarks and a floating glass tab bar. Bookmarks are read on-device using the same extraction core as the extension — no official API needed.
-  </p>
-</div>
+# It's yours, and it stays yours
 
-## 3. XSaved for Mac — in development
+Everything lives on your own device. There's no account to create and nothing handed off to a server you don't control. Fast, private, and entirely yours.
 
-A native macOS app with a translucent sidebar, a dashboard of headline stats, an image-forward grid, and a native inspector for detail. It shares the iOS design system and models, and the same off-screen `WKWebView` extraction approach for reading bookmarks and running live actions.
+# Get it
 
-# Under the hood
-
-XSaved is small in surface area but dense in interesting engineering problems:
-
-- **Local-first by design** — every saved tweet lives in the user's browser first (Dexie / IndexedDB). The cloud backend exists only for auth, billing, and AI taxonomy — never as the primary store for personal data.
-- **Sub-50ms search over 50K+ bookmarks** — a custom IndexedDB query pipeline with a token-aware parser, multi-entry indexes, and a hot/warm/cold cache layer, with no server round-trip.
-- **On-device AI** — a full embeddings → hierarchical clustering → topic-naming pipeline runs entirely in the browser via ONNX Runtime Web and Transformers.js, in an offscreen document so the UI never blocks.
-- **Surviving X's frontend churn** — early request interception captures the bookmarks API response before page scripts run, isolating the product from cosmetic DOM changes on x.com.
-- **A typed, serverless backend** — a single Hono app on Cloudflare Workers fronting Neon Postgres via Drizzle ORM, with JWT auth, Stripe subscriptions, and an Anthropic Claude-powered taxonomy workflow for premium AI features.
-
-# Tech stack
-
-TypeScript · React 19 · Chrome MV3 · Webpack · SwiftUI (iOS 26 / macOS 26) · Cloudflare Workers · Hono · Neon Postgres · Drizzle ORM · ONNX Runtime Web · Transformers.js · Dexie / IndexedDB · Anthropic Claude · Stripe
-
-# What I built (solo)
-
-Everything: product design, the Chrome extension, the native iOS and Mac apps, the serverless backend, the AI integration, billing, the marketing site, and the Chrome Web Store listing — designed, built, and shipped by one person.
-
-- **Full-stack product engineering** — browser extension, native apps, and serverless backend, end-to-end TypeScript and Swift.
-- **Applied AI/ML** — on-device embeddings and clustering, plus Claude for premium topic naming.
-- **Performance engineering** — an IndexedDB query layer that beats most server-backed search on small/medium corpora.
-- **Product ownership** — from problem definition and UX to deployment, billing, Web Store review, and ongoing operations.
-
-# Try it
-
-<Steps className="mt-4">
-  <Step number={1} title="Install the Chrome extension">
-    Add XSaved from the Chrome Web Store, or learn more at [xsaved.com](https://xsaved.com).
-  </Step>
-  <Step number={2} title="Open your bookmarks on X">
-    Make sure you're logged into X — XSaved captures and caches your bookmarks locally.
-  </Step>
-  <Step number={3} title="Search, tag, and organize">
-    Your library builds itself, auto-clustered by topic and instantly searchable.
-  </Step>
-</Steps>
+XSaved is live on the Chrome Web Store. Add it, open your bookmarks on X, and watch your library build itself. See it in action at [xsaved.com](https://xsaved.com).
